@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Lead Management System</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../Scripts/jquery.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+   
+
+</head>
+<body>
+    
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:#63545b;">
+            <div class="container">
+                <div class="navbar-header">
+                   
+                    <a class="navbar-brand" href=@Url.Action("Index", "Home") style="color:#fdbb0b">Lead Management System</a>
+                </div>
+                
+                <div class="navbar-collapse collapse">
+                     
+                    @{
+                        switch (Session["Type"])
+                        {
+                            case "Sale":
+                                <ul class='nav navbar-nav' id='mUser'><li><a href='../Home/Index'>Home</a></li><li><a href='../Assign/AssignLeads'>Assigned Leads</a></li></ul>
+                                break;
+                            case "Admin":
+                                <ul class='nav navbar-nav' id='mAdmin'><li><a href='../Home/Index'>Home</a></li><li><a href='../Account/Details'>Sales</a></li><li><a href='../Lead/LeadDetails'>Lead</a></li></ul>
+                                break;
+
+                        }
+                    }
+                    
+                   
+
+                    <ul class="nav navbar-nav navbar-right ">
+                        <li>
+                            <a href="#" id="registerLink">Welcome <b>@Session["Name"].ToString().ToUpper()</b></a>
+                        </li>
+                        <li><a href=@Url.Action("Login", "Login") id="mylink"><b>Log Out</b></a></li>
+                    </ul>
+
+                </div>
+            </div >
+        </div>
+
+        @RenderBody()
+
+
+
+</body>
+</html>

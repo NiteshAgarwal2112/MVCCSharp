@@ -1,0 +1,147 @@
+﻿*{
+margin:0px 0px 0px 0px;
+padding:0px;
+}
+.image1
+{
+  height:650px;
+  width:50%;
+  background-image: url("../Login.jpg"); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 650px;
+  float:left;
+}
+.loginform
+{
+    height:650px;
+    background-color: #fdbb0b;
+    width:50%;
+     float:left;
+}
+.logindiv
+{
+  height:30%;
+  margin:auto;
+ text-align: center;
+color:#63545b;
+clear:both;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.logButton  {
+  background-color: #63545b;
+  color: #fdbb0b;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.logButton :hover {
+  color:white !important;
+}
+.home {
+    background-color: #fdbb0b;
+    width:100%;
+    height:660px;
+}
+.homeimage {
+    top: 100px;
+    left: 150px;
+    width: 80%;
+    height: 500px;
+    background-image: url("../SalesPerson.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
+    position: absolute;
+    z-index: 1;
+}
+.welcome {
+    top: 300px;
+    left: 200px;
+    display: inline-block;
+    position: absolute;
+    animation-name: welcome;
+    animation-duration: 1s;
+    z-index: 2;
+    font-size: 50px;
+    color: #fdbb0b;
+}
+@keyframes welcome {
+    0% {
+        left: 0px;
+        top: 300px;
+    }
+
+    100% {
+        top: 300px;
+        left: 200px;
+    }
+}
+.user {
+    top: 300px;
+    right: 200px;
+    width: 250px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 3;
+    animation-name: user;
+    animation-duration: 1s;
+    font-size: 50px;
+    color: #fdbb0b;
+}
+@keyframes user {
+    0% {
+        right: 0px;
+        top: 300px;
+    }
+
+    100% {
+        top: 300px;
+        right: 200px;
+    }
+
+}
+.viewtable {
+    top: 100px;
+    position: absolute;
+    z-index: 1;
+    overflow: scroll;
+    display:block;
+    text-align:center;
+}
+.Grid1 {
+    text-align: center;
+    background-color: #fdbb0b;
+}
+.SaleHead {
+    background-color: #63545b;
+    color: #fdbb0b;    
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+.maxheight{
+    max-height:10px !important;
+    overflow:scroll !important;
+}
+.gridbutton
+{
+    margin:5px;
+}
+.gridHeader {
+    text-align: center;
+    background-color: #fdbb0b;
+}

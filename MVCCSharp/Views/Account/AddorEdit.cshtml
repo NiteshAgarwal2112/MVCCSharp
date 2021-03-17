@@ -1,0 +1,39 @@
+﻿@model MVCCSharp.Models.Account
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm("AddorEdit", "Account", FormMethod.Post))
+{
+    @Html.HiddenFor(model=>model.Personid)
+    <table border="0" cellpadding="5" cellspacing="5" class="table table-responsive table-striped">
+        <tr>
+            <td>
+                @Html.EditorFor(model => model.FirstName)
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                @Html.EditorFor(model => model.LastName)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="Email" name="Email" placeholder="Email:" required pattern="^\w+([-+.']\w+)*@("@")\w+([-.]\w+)*\.\w+([-.]\w+)*$" class="form-control" />
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="Phone" name="Phone" placeholder="Phone" required pattern="[0-9]{10}" class="form-control" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="Empid" name="Empid" " placeholder=" Empid"" required class="form-control" />
+            </td>
+        </tr>
+    </table>
+}
+
