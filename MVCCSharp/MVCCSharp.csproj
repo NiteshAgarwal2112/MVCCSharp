@@ -138,6 +138,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="DBBackup\LeadManagement.bak" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
